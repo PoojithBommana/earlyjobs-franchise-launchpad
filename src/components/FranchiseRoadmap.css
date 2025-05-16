@@ -2,12 +2,25 @@
 .roadmap-section {
   padding: 5rem 0;
   background-color: var(--ejobs-gray-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.roadmap-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, transparent, rgba(249, 115, 22, 0.2), transparent);
 }
 
 .roadmap-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
 }
 
 .roadmap-heading {
@@ -16,6 +29,20 @@
   font-weight: 700;
   margin-bottom: 3rem;
   color: var(--ejobs-black);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.roadmap-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--ejobs-orange), transparent);
 }
 
 .roadmap-timeline {
@@ -33,6 +60,7 @@
   width: 0.25rem;
   background-color: rgba(249, 115, 22, 0.2);
   transform: translateX(-50%);
+  border-radius: 4px;
 }
 
 .roadmap-steps {
@@ -41,6 +69,11 @@
 
 .roadmap-step {
   margin-bottom: 3rem;
+  transition: transform 0.4s ease;
+}
+
+.roadmap-step:hover {
+  transform: translateY(-8px);
 }
 
 .roadmap-dot {
@@ -54,11 +87,29 @@
   border-radius: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2);
+}
+
+.roadmap-step:hover .roadmap-dot {
+  transform: translateX(-50%) scale(1.25);
+  box-shadow: 0 0 0 6px rgba(249, 115, 22, 0.2), 0 0 20px rgba(249, 115, 22, 0.4);
 }
 
 .roadmap-content {
   display: flex;
   align-items: flex-start;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.roadmap-step:hover .roadmap-content {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(249, 115, 22, 0.2);
 }
 
 .roadmap-number {
@@ -74,12 +125,22 @@
   font-weight: 700;
   font-size: 1.125rem;
   margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.roadmap-step:hover .roadmap-number {
+  transform: rotate(360deg);
 }
 
 .roadmap-text h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.roadmap-step:hover .roadmap-text h3 {
+  color: var(--ejobs-orange);
 }
 
 .roadmap-text p {
@@ -92,11 +153,29 @@
   font-weight: 700;
   color: rgba(249, 115, 22, 0.3);
   margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.roadmap-step:hover .roadmap-step-number {
+  color: rgba(249, 115, 22, 0.6);
+  transform: translateX(5px);
 }
 
 .roadmap-button {
   margin-top: 3rem;
   text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.roadmap-button .btn-primary {
+  transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+}
+
+.roadmap-button .btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(249, 115, 22, 0.4);
 }
 
 @media (min-width: 768px) {
@@ -117,6 +196,15 @@
   
   .roadmap-content {
     display: block;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+  }
+
+  .roadmap-step:hover .roadmap-content {
+    box-shadow: none;
+    border: none;
   }
   
   .roadmap-dot {
