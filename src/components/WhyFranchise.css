@@ -1,0 +1,59 @@
+
+.why-franchise {
+  background-color: var(--ejobs-gray-light);
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .reasons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.reason-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s;
+}
+
+.reason-card:hover {
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--ejobs-orange);
+}
+
+.reason-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--ejobs-orange);
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.reason-card:hover .reason-icon {
+  transform: scale(1.1);
+}
+
+.reason-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ejobs-black);
+}
+
+.reason-description {
+  color: var(--ejobs-black-light);
+}

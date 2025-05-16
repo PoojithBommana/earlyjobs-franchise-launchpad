@@ -1,132 +1,140 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
-
-    --radius: 0.5rem;
-
-    /* EarlyJobs custom colors */
-    --ejobs-orange: 20 100% 50%;
-    --ejobs-orange-dark: 20 100% 40%;
-    --ejobs-black: 220 20% 15%;
-    --ejobs-black-light: 220 10% 35%;
-    --ejobs-gray-light: 220 20% 97%;
-  }
-
-  .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
-
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
-
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 216 34% 17%;
-
-    --radius: 0.5rem;
-  }
+/* Base styles */
+:root {
+  --ejobs-orange: #ff6b00;
+  --ejobs-orange-dark: #cc5500;
+  --ejobs-black: #1e2330;
+  --ejobs-black-light: #404759;
+  --ejobs-gray-light: #f5f6f8;
+  --border-color: #e2e2e2;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-  }
-  
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: var(--ejobs-black);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
   .container {
-    @apply px-4 mx-auto max-w-7xl sm:px-6;
-  }
-  
-  .section {
-    @apply py-16 md:py-24;
-  }
-  
-  .section-heading {
-    @apply text-3xl md:text-4xl font-bold text-ejobs-black mb-6;
-  }
-
-  /* Cards and stat blocks */
-  .stat-card {
-    @apply bg-white p-6 rounded-lg shadow-md text-center transition-all;
-  }
-  
-  .card {
-    @apply rounded-lg shadow-md p-6;
-  }
-  
-  /* Button styles */
-  .btn-primary {
-    @apply bg-ejobs-orange hover:bg-ejobs-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors;
-  }
-  
-  .btn-outline {
-    @apply border-2 border-ejobs-orange text-ejobs-orange hover:bg-ejobs-orange hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+    padding: 0 1.5rem;
   }
 }
 
-/* Animation classes */
+.section {
+  padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+.section-heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--ejobs-black);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 2.25rem;
+  }
+}
+
+.btn-primary {
+  background-color: var(--ejobs-orange);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--ejobs-orange-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--ejobs-orange);
+  color: var(--ejobs-orange);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--ejobs-orange);
+  color: white;
+}
+
+/* Animation styles */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  border: 1px solid var(--ejobs-orange);
 }

@@ -1,0 +1,149 @@
+
+.limited-offer {
+  padding: 3rem 0;
+}
+
+.offer-container {
+  background-image: linear-gradient(to right, var(--ejobs-orange), var(--ejobs-orange-dark));
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.light-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33.333%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: rotate(45deg) translateX(25%);
+}
+
+.offer-content {
+  padding: 2rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .offer-content {
+    padding: 3rem;
+  }
+}
+
+.offer-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .offer-layout {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.offer-info {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .offer-info {
+    width: 66.666%;
+  }
+}
+
+.offer-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.offer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .offer-title {
+    font-size: 1.875rem;
+  }
+}
+
+.offer-subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.check-icon-container {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.25rem;
+  margin-top: 0.125rem;
+}
+
+.check-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--ejobs-orange);
+}
+
+.offer-deadline {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.offer-cta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .offer-cta {
+    width: 33.333%;
+  }
+}
+
+.offer-button {
+  background-color: white;
+  color: var(--ejobs-orange);
+  padding: 1.5rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.offer-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.arrow-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s;
+}
+
+.offer-button:hover .arrow-icon {
+  transform: translateX(0.25rem);
+}
