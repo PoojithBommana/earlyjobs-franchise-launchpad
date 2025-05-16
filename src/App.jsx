@@ -8,6 +8,7 @@ import LimitedOffer from './components/LimitedOffer';
 import SetupRequirements from './components/SetupRequirements';
 import Testimonials from './components/Testimonials';
 import LeadForm from './components/LeadForm';
+import './App.css';
 
 function App() {
   return (
