@@ -1,0 +1,147 @@
+
+.earnings-section {
+  background-color: white;
+  padding: 5rem 0;
+}
+
+.earnings-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.earnings-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.earnings-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.earnings-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  border-top: 4px solid var(--ejobs-orange);
+}
+
+.earnings-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.earnings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--ejobs-gray-medium);
+}
+
+.earnings-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.earnings-item-label {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.earnings-item-sublabel {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.earnings-item-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ejobs-orange);
+}
+
+.earnings-dark-card {
+  background-color: var(--ejobs-black);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.earnings-dark-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.earnings-dark-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.earnings-dark-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ejobs-orange);
+}
+
+.earnings-dark-subtitle {
+  font-size: 0.875rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.earnings-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.earnings-feature-item {
+  display: flex;
+  align-items: center;
+}
+
+.earnings-feature-icon-wrapper {
+  background-color: var(--ejobs-orange);
+  border-radius: 9999px;
+  padding: 0.25rem;
+  margin-right: 0.75rem;
+}
+
+.earnings-feature-icon {
+  height: 1rem;
+  width: 1rem;
+  color: white;
+}
+
+.earnings-gradient-card {
+  background: linear-gradient(to right, var(--ejobs-orange), var(--ejobs-orange-dark));
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+}
+
+.earnings-gradient-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+  .earnings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
