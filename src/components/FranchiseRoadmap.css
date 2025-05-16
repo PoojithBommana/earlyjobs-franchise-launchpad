@@ -1,0 +1,145 @@
+
+.roadmap-section {
+  padding: 5rem 0;
+  background-color: var(--ejobs-gray-light);
+}
+
+.roadmap-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.roadmap-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--ejobs-black);
+}
+
+.roadmap-timeline {
+  position: relative;
+  margin-top: 3rem;
+}
+
+/* Timeline connector (desktop) */
+.roadmap-connector {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 0.25rem;
+  background-color: rgba(249, 115, 22, 0.2);
+  transform: translateX(-50%);
+}
+
+.roadmap-steps {
+  position: relative;
+}
+
+.roadmap-step {
+  margin-bottom: 3rem;
+}
+
+.roadmap-dot {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--ejobs-orange);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.roadmap-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.roadmap-number {
+  display: flex;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--ejobs-orange);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-right: 1rem;
+}
+
+.roadmap-text h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-text p {
+  color: var(--ejobs-black-light);
+}
+
+.roadmap-step-number {
+  display: none;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgba(249, 115, 22, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-button {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .roadmap-connector {
+    display: block;
+  }
+  
+  .roadmap-step {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+  
+  .roadmap-step.even {
+    flex-direction: row-reverse;
+  }
+  
+  .roadmap-content {
+    display: block;
+  }
+  
+  .roadmap-dot {
+    display: block;
+  }
+  
+  .roadmap-number {
+    display: none;
+  }
+  
+  .roadmap-step-number {
+    display: inline-block;
+  }
+  
+  .roadmap-step.even .roadmap-content {
+    text-align: right;
+  }
+  
+  .roadmap-step.odd .roadmap-empty {
+    grid-column-start: 2;
+  }
+  
+  .roadmap-step.even .roadmap-empty {
+    grid-column-start: 1;
+  }
+}

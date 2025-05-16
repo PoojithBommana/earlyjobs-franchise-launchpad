@@ -1,0 +1,126 @@
+
+.setup-section {
+  padding: 5rem 0;
+  background-color: var(--ejobs-gray-light);
+}
+
+.setup-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.setup-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--ejobs-black);
+}
+
+.setup-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.setup-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: all 0.3s;
+}
+
+.setup-card:hover {
+  border: 1px solid var(--ejobs-orange);
+  box-shadow: var(--shadow-lg);
+}
+
+.setup-icon-wrapper {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.3s;
+}
+
+.setup-card:hover .setup-icon-wrapper {
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+.setup-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--ejobs-orange);
+}
+
+.setup-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.setup-card-description {
+  color: #4b5563;
+}
+
+.setup-breakdown {
+  margin-top: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--ejobs-orange);
+}
+
+.setup-breakdown-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.setup-table-container {
+  overflow-x: auto;
+}
+
+.setup-table {
+  width: 100%;
+}
+
+.setup-table th {
+  text-align: left;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ejobs-gray-medium);
+}
+
+.setup-table th:last-child {
+  text-align: right;
+}
+
+.setup-table td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ejobs-gray-medium);
+}
+
+.setup-table td:last-child {
+  text-align: right;
+}
+
+.setup-table tr:last-child td {
+  font-weight: 700;
+}
+
+.setup-table tr:last-child td:last-child {
+  color: var(--ejobs-orange);
+}
+
+@media (min-width: 768px) {
+  .setup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
