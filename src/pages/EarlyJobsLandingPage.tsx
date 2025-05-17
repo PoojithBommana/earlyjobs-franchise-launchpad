@@ -641,7 +641,7 @@ const EarlyJobsLandingPage = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section>    
 
       {/* FAQs Section */}
       <section id="faq" className="section bg-ejobs-gray-light">
