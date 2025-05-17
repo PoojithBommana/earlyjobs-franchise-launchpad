@@ -63,13 +63,13 @@ const LimitedOffer = () => {
               </div>
               
               <div className="offer-cta">
-                <button
+                {/* <button
                   onClick={scrollToContact}
                   className="offer-button"
                 >
                   Apply for Franchise Now
                   <ArrowRight className="arrow-icon" />
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

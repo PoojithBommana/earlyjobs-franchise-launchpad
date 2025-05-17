@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './FranchiseRoadmap.css';
 
@@ -49,9 +48,7 @@ const FranchiseRoadmap = () => {
             {steps.map((step, index) => (
               <div 
                 key={index} 
-                className={`roadmap-step ${
-                  index % 2 === 0 ? 'odd' : 'even'
-                }`}
+                className={`roadmap-step ${index % 2 === 0 ? 'step-right' : 'step-left'}`}
               >
                 {/* Timeline dot (desktop) */}
                 <div className="roadmap-dot"></div>
@@ -78,9 +75,9 @@ const FranchiseRoadmap = () => {
             ))}
           </div>
           
-          <div className="roadmap-button">
+          {/* <div className="roadmap-button">
             <button className="btn-primary">Book Intro Call</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
