@@ -145,6 +145,9 @@
   gap: 1.5rem;
 }
 
+
+
+
 .trusted-label {
   font-size: 0.875rem;
   font-weight: 500;
@@ -154,18 +157,18 @@
 }
 
 .social-logo, .trusted-logo {
-  height: 2rem;
-  filter: grayscale(1);
+  height: 40px;
+  
   opacity: 0.7;
   transition: all 0.4s ease;
 }
 
 .trusted-logo {
-  height: 1.5rem;
+  height: 40px;
 }
 
 .social-logo:hover, .trusted-logo:hover {
-  filter: grayscale(0);
+  
   opacity: 1;
   transform: scale(1.1);
 }

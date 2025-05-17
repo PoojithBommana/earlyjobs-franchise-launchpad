@@ -7,7 +7,7 @@ import WhyFranchise from '@/components/WhyFranchise';
 import EarningModel from '@/components/EarningModel';
 import SetupRequirements from '@/components/SetupRequirements';
 import FranchiseRoadmap from '@/components/FranchiseRoadmap';
-import Testimonials from '@/components/Testimonials';
+// import Testimonials from '@/components/Testimonials';
 import LimitedOffer from '@/components/LimitedOffer';
 import FAQ from '@/components/FAQ';
 
@@ -21,7 +21,7 @@ const Index = () => {
       <EarningModel />
       <SetupRequirements />
       <FranchiseRoadmap />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <LimitedOffer />
       <FAQ />
     </div>
