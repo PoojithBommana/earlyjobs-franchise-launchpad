@@ -36,6 +36,10 @@
   transform: scale(1.05);
 }
 
+
+.logo-pic {
+  height:130px;}
+
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;

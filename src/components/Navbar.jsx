@@ -32,9 +32,7 @@ const Navbar = () => {
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="navbar-container container">
         <div className="logo">
-          <span className="logo-text">
-            Early<span>Jobs</span>
-          </span>
+       <img src = "/early-jobs-logo2.png" className='logo-pic'/>
         </div>
 
         {/* Desktop Menu */}
