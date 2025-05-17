@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import './LimitedOffer.css';
 
 // Initialize EmailJS with your Public Key
-emailjs.init('VoeCM-uzRgidt1O24');
+emailjs.init('8dLYIF2DBa9KslCfr');
 
 const LimitedOffer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,10 +15,8 @@ const LimitedOffer = () => {
     email: '',
     mobile: '',
     city: '',
-    investmentCapacity: '',
     experience: '',
     timeline: '',
-    referralCode: '',
     questions: '',
     agreeToCommunications: false,
   });
@@ -56,7 +54,7 @@ const LimitedOffer = () => {
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
     if (!formData.mobile) newErrors.mobile = 'Mobile Number is required';
     if (!formData.city) newErrors.city = 'Preferred City/Region is required';
-    if (!formData.investmentCapacity) newErrors.investmentCapacity = 'Investment Capacity is required';
+    // if (!formData.investmentCapacity) newErrors.investmentCapacity = 'Investment Capacity is required';
     if (!formData.timeline) newErrors.timeline = 'Expected Timeline to Start is required';
     if (!formData.agreeToCommunications) newErrors.agreeToCommunications = 'You must agree to receive communications';
     return newErrors;
@@ -76,15 +74,13 @@ const LimitedOffer = () => {
       email: formData.email,
       mobile: formData.mobile,
       city: formData.city,
-      investmentCapacity: formData.investmentCapacity,
       experience: formData.experience || 'N/A',
       timeline: formData.timeline,
-      referralCode: formData.referralCode || 'N/A',
       questions: formData.questions || 'N/A',
       agreeToCommunications: formData.agreeToCommunications ? 'Yes' : 'No',
     };
 
-    emailjs.send('service_efdv99v', 'template_1uy4szi', emailParams)
+    emailjs.send('service_mvcabrp', 'template_xwaj04n', emailParams)
       .then((response) => {
         console.log('Email sent successfully!', response.status, response.text);
         alert('Application submitted successfully!');
@@ -94,10 +90,10 @@ const LimitedOffer = () => {
           email: '',
           mobile: '',
           city: '',
-          investmentCapacity: '',
+       
           experience: '',
           timeline: '',
-          referralCode: '',
+        
           questions: '',
           agreeToCommunications: false,
         });
@@ -248,27 +244,7 @@ const LimitedOffer = () => {
                 {errors.city && <p className="form-error">{errors.city}</p>}
               </div>
 
-              {/* Investment Capacity */}
-              <div className="form-group">
-                <label className="form-label">
-                  Investment Capacity <span className="required">*</span>
-                </label>
-                <select
-                  name="investmentCapacity"
-                  value={formData.investmentCapacity}
-                  onChange={handleInputChange}
-                  className="form-select"
-                >
-                  <option value="">-- Select --</option>
-                  <option value="Under $50,000">Under $50,000</option>
-                  <option value="$50,000 - $100,000">$50,000 - $100,000</option>
-                  <option value="$100,000 - $250,000">$100,000 - $250,000</option>
-                  <option value="Over $250,000">Over $250,000</option>
-                </select>
-                {errors.investmentCapacity && (
-                  <p className="form-error">{errors.investmentCapacity}</p>
-                )}
-              </div>
+              
 
               {/* Relevant Experience */}
               <div className="form-group">
@@ -309,19 +285,7 @@ const LimitedOffer = () => {
                 {errors.timeline && <p className="form-error">{errors.timeline}</p>}
               </div>
 
-              {/* Referral Code */}
-              <div className="form-group">
-                <label className="form-label">
-                  Referral Code (If Any)
-                </label>
-                <input
-                  type="text"
-                  name="referralCode"
-                  value={formData.referralCode}
-                  onChange={handleInputChange}
-                  className="form-input"
-                />
-              </div>
+             
 
               {/* Any Questions */}
               <div className="form-group">
